@@ -31,7 +31,23 @@
   <!-- Custom styles for this template -->
 
   <link href="css/small-business.css" rel="stylesheet">
+  <script type="text/javascript">
+        var host = "https://sharecad.org/",
+            frame = "cadframe/load?url=";
 
+        var reloadIframe = function (frame, src) {
+            frame.src = src ? src : host + "cadframe";
+        }
+        var btn1Click = function () {
+            reloadIframe($("#frame1")[0], host + frame + "https://www.cadsofttools.com/dwgviewer/floorplan.dwg");
+        }
+        var btn2Click = function () {
+            reloadIframe($("#frame1")[0], "https://socket-io-chat.now.sh/");
+        }
+        var btn3Click = function () {
+            reloadIframe($("#frame1")[0], host + frame + "https://www.cadstudio.cz/dl/budweiser.dwg");
+        }
+    </script>
 
 
 </head>
@@ -156,7 +172,7 @@
 
                     <div class="card-body">
 
-                        <h2 class="card-title">Card One</h2>
+                        <h2 class="card-title">Model One</h2>
 
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
 
@@ -164,7 +180,7 @@
 
                     <div class="card-footer">
 
-                        <img src="vendor/baseline_location_city_black_36dp.png"><a href="#" class="btn btn-danger btn-sm">More Info</a>
+                        <img src="vendor/baseline_location_city_black_36dp.png"><button class="btn btn-danger btn-sm" onclick="btn1Click()">floorplan.dwg</button>
 
                     </div>
 
@@ -180,7 +196,7 @@
 
                     <div class="card-body">
 
-                        <h2 class="card-title">Card Two</h2>
+                        <h2 class="card-title">Chat with us!</h2>
 
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
 
@@ -188,7 +204,7 @@
 
                     <div class="card-footer">
 
-                        <img src="vendor/baseline_voice_chat_black_36dp.png"><a href="#" class="btn btn-danger btn-sm">More Info</a>
+                        <img src="vendor/baseline_voice_chat_black_36dp.png"><button class="btn btn-danger btn-sm" onclick="btn2Click()">Más Info</button>
 
                     </div>
 
@@ -204,7 +220,7 @@
 
                     <div class="card-body">
 
-                        <h2 class="card-title">Card Three</h2>
+                        <h2 class="card-title">Model Three</h2>
 
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
 
@@ -212,7 +228,7 @@
 
                     <div class="card-footer">
 
-                        <img src="vendor/baseline_domain_black_36dp.png"><a href="#" class="btn btn-danger btn-sm">More Info</a>
+                        <img src="vendor/baseline_domain_black_36dp.png"><button class="btn btn-danger btn-sm" onclick="btn3Click()">budweiser.dwg</button>
 
                     </div>
 
